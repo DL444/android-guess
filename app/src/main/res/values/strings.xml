@@ -4,5 +4,6 @@
     <string name="hint_correct">You got it!</string>
     <string name="hint_high">Lorem ipsum</string>
     <string name="hint_low">Lorem ipsum</string>
+    <string name="hint_input">####</string>
     <string name="check">CHECK</string>
 </resources>
