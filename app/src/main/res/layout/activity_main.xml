@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <TextView
+        android:id="@+id/hintTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_init"
+        app:layout_constraintTop_toTopOf="@+id/topGuideline"
+        app:layout_constraintBottom_toTopOf="@id/chevTopGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:textSize="20sp"
+        android:textAlignment="center"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/chevTopGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <ImageView
+        android:id="@+id/chevUp"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_chevron_up"
+        app:layout_constraintTop_toBottomOf="@id/chevTopGuideline"
+        app:layout_constraintBottom_toTopOf="@id/inputBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <EditText
+        android:id="@+id/inputBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/chevUp"
+        app:layout_constraintBottom_toTopOf="@id/chevDown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="32sp"
+        android:hint="####"/>
+
+    <ImageView
+        android:id="@+id/chevDown"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_chevron_down"
+        app:layout_constraintBottom_toTopOf="@id/chevBottomGuideline"
+        app:layout_constraintTop_toBottomOf="@id/inputBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/chevBottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <ImageView
+        android:id="@+id/resultEmoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_smile"
+        app:layout_constraintTop_toTopOf="@id/chevBottomGuideline"
+        app:layout_constraintBottom_toTopOf="@id/bottomGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="resultEmoji_click"/>
+
+    <Button
+        android:id="@+id/checkBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_ellipse"
+        app:layout_constraintTop_toTopOf="@id/chevBottomGuideline"
+        app:layout_constraintBottom_toTopOf="@id/bottomGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/check"
+        android:onClick="checkBtn_click"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/altHigh"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/bottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
