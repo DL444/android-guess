@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Random Guess Standard</string>
-    <string name="hint_init">The computer only considers a number from 1 to 9999</string>
+    <string name="hint_init">Try to guess a number between 1 to 9999</string>
     <string name="hint_correct">You got it!</string>
-    <string name="hint_high">Lorem ipsum</string>
-    <string name="hint_low">Lorem ipsum</string>
+    <string name="hint_high">Too high!</string>
+    <string name="hint_low">Too low!</string>
     <string name="hint_input">####</string>
     <string name="check">CHECK</string>
 </resources>
